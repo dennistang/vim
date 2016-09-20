@@ -29,6 +29,9 @@ command W w !sudo tee % > /dev/null
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
+" Enable wildmenu
+set wildmenu
+
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
@@ -91,10 +94,13 @@ set guioptions-=L
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
+if (has("termguicolors"))
+  set termguicolors
+endif
 syntax enable 
 
 try
-    colorscheme desert
+    colorscheme tender
 catch
 endtry
 
