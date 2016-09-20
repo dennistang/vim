@@ -8,6 +8,9 @@ set history=500
 filetype plugin on
 filetype indent on
 
+" Bind clipboard to OS X
+set clipboard=unnamed
+
 " Set to auto read when a file is changed from the outside
 set autoread
 
