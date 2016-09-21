@@ -100,14 +100,16 @@ set guioptions-=L
 if (has("termguicolors"))
   set termguicolors
 endif
+
+" disable Background Color Erase (BCE) so that color schemes
+" render properly when inside 256-color tmux and GNU screen.
+if &term =~ '256color'
+    set t_ut=
+endif
+
 syntax enable 
-
-try
-    colorscheme tender
-catch
-endtry
-
 set background=dark
+colorscheme tender
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -260,7 +262,7 @@ autocmd BufWrite *.coffee :call DeleteTrailingWS()
 "    means that you can undo even when you close a buffer/VIM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 try
-    set undodir=~/.vim/temp_dirs/undodir
+    set undodir=~/.vim/tmp/undo
     set undofile
 catch
 endtry

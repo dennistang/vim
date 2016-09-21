@@ -8,7 +8,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'arielrossanigo/dir-configs-override.vim'
 
 Plug 'yegappan/mru'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/syntastic'
 Plug 'junegunn/goyo.vim'
@@ -38,12 +39,14 @@ Plug 'Townk/vim-autoclose'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'honza/vim-snippets'
+Plug 'garbas/vim-snipmate'
 
 " Multiple cursor support
 Plug 'terryma/vim-multiple-cursors'
 
+" Angular
+Plug 'bdauria/angular-cli.vim'
 "Plug 'magarcia/vim-angular2-snippets'
-Plug 'garbas/vim-snipmate'
 
 " Ack code search (requires ack installed in the system)
 Plug 'mileszs/ack.vim'
